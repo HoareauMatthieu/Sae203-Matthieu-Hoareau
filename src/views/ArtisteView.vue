@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-zinc-900 p-8 pt-10">
-    <h1 class="pt-20 font-Anton text-3xl">Artistes</h1>
+  <div class="bg-zinc-900 p-8 pt-10 sm:pt-20">
+    <h1 class="pt-20 pb-10 font-Anton text-4xl sm:text-5xl lg:pt-16 lg:text-6xl">Artistes</h1>
     <div class="grid grid-cols-2 gap-4 text-center sm:grid-cols-3 lg:grid-cols-4">
       <div class="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">1</div>
       <div class="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">2</div>
@@ -18,6 +18,6 @@
       <div class="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">14</div>
       <div class="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">15</div>
     </div>
-    <h1 class="pt-20 font-Anton text-3xl">DJ</h1>
+    <h1 class="pt-20 pb-10 font-Anton text-4xl sm:text-5xl lg:pt-16 lg:text-6xl">DJ</h1>
   </div>
 </template>

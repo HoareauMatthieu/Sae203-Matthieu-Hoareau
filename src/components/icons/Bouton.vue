@@ -1,11 +1,11 @@
 <template>
   <div
     class="
-      my-7
+      my-3
       ml-auto
       mr-auto
       h-auto
-      w-2/3
+      w-full
       rounded-lg
       border-2 border-white
       bg-transparent
