@@ -33,7 +33,7 @@
       <router-link to="/"><icon-logo class="h-24 w-24" /></router-link>
       <div class="flex flex-auto items-center justify-end text-white">
         <ul class="flex list-none items-center gap-10 p-3 pl-14">
-          <li class="font-Inter"><router-link to="/artiste">Artiste</router-link></li>
+          <li class="font-Inter"><router-link to="/artiste">Artistes</router-link></li>
           <li class="font-Inter"><router-link to="/festival">Festival</router-link></li>
           <li class="font-Inter"><router-link to="/concert">Concert</router-link></li>
         </ul>
@@ -63,6 +63,9 @@ export default {
     MenuAlt3Icon,
     PlusIcon,
     IconLogo,
+  },
+  beforeMount() {
+    this.$router.afterEach(() => (this.menuOuvert = false));
   },
 };
 </script>

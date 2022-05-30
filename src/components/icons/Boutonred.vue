@@ -1,7 +1,6 @@
 <template>
   <div
     class="
-      text
       ml-auto
       mr-auto
       h-auto

@@ -1,38 +1,26 @@
 <template>
   <div
     class="
-      text
-      m-2
+      my-7
       ml-auto
       mr-auto
-      flex
       h-auto
-      w-3/4
-      flex-row
+      w-2/3
       rounded-lg
       border-2 border-white
       bg-transparent
-      px-11
-      py-3
+      p-3
       text-center
       font-Anton
-      text-3xl
+      text-2xl
       font-bold
       uppercase
       tracking-wide
       text-white
-      sm:py-4 sm:text-4xl
-      lg:my-1
+      sm:text-4xl
+      lg:text-5xl
     "
   >
-    {{ bouton }}
-    <div class="text-red-400">
-      {{ boutonred }}
-    </div>
-    <div class="text-purple-400">
-      {{ boutonpurple }}
-    </div>
-
     <slot />
   </div>
 </template>
