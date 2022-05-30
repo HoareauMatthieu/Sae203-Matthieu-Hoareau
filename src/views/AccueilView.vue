@@ -3,7 +3,7 @@
     <div class="bg-black bg-hero-pattern bg-cover pt-36">
       <icon-logo class="ml-auto mr-auto" />
       <p class="pt-40 text-center font-Inter">DU 22 AU 24 MARS 2022</p>
-      <bouton bouton="Prendre mon billet" />
+      <bouton bouton="Prendre mon " boutonred="Billet" />
       <div class="flex flex-row justify-center gap-9 pt-48 pb-60">
         <p>Artiste</p>
         <span class="w-0.5 bg-white"></span>

@@ -18,13 +18,13 @@
         :class="{ 'translate-x-0': menuOuvert }"
       >
         <ul class="m-14 mt-24 flex flex-col gap-24 text-center text-white">
-          <li><router-link to="/">Artistes</router-link></li>
-          <li><router-link to="/">Programmation</router-link></li>
-          <li><router-link to="/">Festival</router-link></li>
+          <li><router-link to="/artiste">Artistes</router-link></li>
+          <li><router-link to="/programme">Programmation</router-link></li>
           <li>
-            <router-link to="/" class="text-red-400">Réserver mon billet</router-link>
+            <router-link to="/festival" class="font-Anton text-xl text-red-400">Festival</router-link>
           </li>
         </ul>
+        <icon-logo class="ml-auto mr-auto h-40 w-40"></icon-logo>
       </div>
     </div>
 
@@ -32,13 +32,15 @@
       <icon-logo class="h-24 w-24" />
       <div class="flex flex-auto items-center justify-end text-white">
         <ul class="flex list-none items-center gap-10 p-3 pl-14">
-          <li class="font-Inter">Artiste</li>
-          <li class="font-Inter">Concert</li>
-          <li class="font-Inter">Festival</li>
+          <li class="font-Inter"><router-link to="/artiste">Artiste</router-link></li>
+          <li class="font-Inter"><router-link to="/programme">Programmation</router-link></li>
+          <li class="font-Inter"><router-link to="/artiste">Concert</router-link></li>
         </ul>
 
         <div class="flex gap-2 p-3">
-          <bouton class="rounded-2xl bg-red-400 px-7 py-1 font-Anton -tracking-tight text-white">S'INSCRIRE</bouton>
+          <bouton class="rounded-2xl bg-red-400 px-7 py-1 font-Anton -tracking-tight text-white"
+            ><router-link to="/festival">Festival</router-link></bouton
+          >
         </div>
       </div>
     </div>
