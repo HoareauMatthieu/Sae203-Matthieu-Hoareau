@@ -1,7 +1,7 @@
  <template>
   <div class="fixed top-0 left-0 right-0 bg-black bg-opacity-80">
     <div class="flex justify-between p-3 lg:hidden">
-      <router-link to="/"><icon-logo class="h-16 w-16" /> </router-link
+      <router-link to="/"><icon-logo class="h-16 w-16" /></router-link
       ><button
         class="relative z-50 text-xl"
         aria-haspopup="true"
@@ -19,10 +19,10 @@
       >
         <ul class="m-14 mt-24 flex flex-col gap-24 text-center text-white">
           <li><router-link to="/artiste">Artistes</router-link></li>
-          <li><router-link to="/programme">Programmation</router-link></li>
+          <li><router-link to="/festival">Festival</router-link></li>
           <li><router-link to="/concert">Concert</router-link></li>
           <li>
-            <router-link to="/festival" class="font-Anton text-xl text-red-400">Festival</router-link>
+            <router-link to="/programme" class="font-Anton text-xl text-red-400">Programmation</router-link>
           </li>
         </ul>
         <icon-logo class="ml-auto mr-auto h-40 w-40"></icon-logo>
@@ -30,17 +30,17 @@
     </div>
 
     <div class="hidden p-3 lg:flex">
-      <icon-logo class="h-24 w-24" />
+      <router-link to="/"><icon-logo class="h-24 w-24" /></router-link>
       <div class="flex flex-auto items-center justify-end text-white">
         <ul class="flex list-none items-center gap-10 p-3 pl-14">
           <li class="font-Inter"><router-link to="/artiste">Artiste</router-link></li>
-          <li class="font-Inter"><router-link to="/programme">Programmation</router-link></li>
+          <li class="font-Inter"><router-link to="/festival">Festival</router-link></li>
           <li class="font-Inter"><router-link to="/concert">Concert</router-link></li>
         </ul>
 
         <div class="flex gap-2 p-3">
           <bouton class="rounded-2xl bg-red-400 px-7 py-1 font-Anton -tracking-tight text-white"
-            ><router-link to="/festival">Festival</router-link></bouton
+            ><router-link to="/programme">Programmation</router-link></bouton
           >
         </div>
       </div>
