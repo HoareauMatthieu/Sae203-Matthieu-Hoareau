@@ -10,12 +10,14 @@
       py-3
       text-center
       font-Anton
-      text-3xl
+      text-2xl
       font-bold
       uppercase
       tracking-wide
       text-white
+      hover:bg-red-600
       sm:text-4xl
+      lg:text-5xl
     "
   >
     {{ bouton }}
