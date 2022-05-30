@@ -32,13 +32,13 @@
       <icon-logo class="h-16 w-16" />
       <div class="flex flex-auto items-center justify-end text-white">
         <ul class="flex list-none items-center gap-10 p-3 pl-14">
-          <li>Artiste</li>
-          <li>Concert</li>
-          <li>Festival</li>
+          <li class="font-Inter">Artiste</li>
+          <li class="font-Inter">Concert</li>
+          <li class="font-Inter">Festival</li>
         </ul>
 
         <div class="flex gap-2 p-3">
-          <bouton class="rounded-2xl bg-red-400 px-7 py-1 text-white">S'INSCRIRE</bouton>
+          <bouton class="rounded-2xl bg-red-400 px-7 py-1 font-Anton -tracking-tight text-white">S'INSCRIRE</bouton>
         </div>
       </div>
     </div>
