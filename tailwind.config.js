@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern': "url('public/image/Bgimage.png')",
+        'hero-pattern2': "url('public/image/bgimagefest.png')",
       }
     },
 

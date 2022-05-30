@@ -9,7 +9,7 @@
         <h2 class="pb-5 text-lg text-white">Programmes</h2>
       </div>
       <div class="font-thin text-gray-500">
-        <h2 class="pb-5 text-lg text-white">Contact</h2>
+        <h2 class="pb-5 text-lg text-white"><router-link to="/contact">Contact</router-link></h2>
       </div>
       <div class="font-thin text-gray-500">
         <h2 class="pb-5 text-lg text-white">Mentions légales</h2>
