@@ -4,13 +4,12 @@
     <p class="pt-3 text-center text-white">Contactes nous sur nos réseaux !</p>
 
     <div class="mt-10 flex flex-row justify-center gap-5">
-      <img src="../assets/social1.svg" alt="Réseaux sociaux de l'agence" class="fill-red-400 stroke-red-400" />
-      <img src="../assets/social2.svg" alt="Réseaux sociaux de l'agence" class="text-white" />
-      <img src="../assets/social3.svg" alt="Réseaux sociaux de l'agence" class="text-white" />
-      <img src="../assets/social4.svg" alt="Réseaux sociaux de l'agence" class="text-white" />
+      <instagram class="" />
+      <facebook class="" />
+      <twitter class="" />
     </div>
 
-    <p class="text-white">Ou ici !</p>
+    <p class="py-8 text-white lg:pl-36">Ou ici !</p>
 
     <div class="w-full">
       <form class="mb-4 rounded px-8 pt-6 pb-8 shadow-md lg:px-80">
@@ -75,7 +74,10 @@
 <script>
 import Bouton from "../components/icons/Bouton.vue";
 import Boutonred from "../components/icons/Boutonred.vue";
+import Facebook from "../components/icons/Facebook.vue";
+import Twitter from "../components/icons/Twitter.vue";
+import Instagram from "../components/icons/Instagram.vue";
 export default {
-  components: { Bouton, Boutonred },
+  components: { Bouton, Boutonred, Twitter, Instagram, Facebook },
 };
 </script>
