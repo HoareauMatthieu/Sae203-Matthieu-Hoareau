@@ -20,6 +20,7 @@
         <ul class="m-14 mt-24 flex flex-col gap-24 text-center text-white">
           <li><router-link to="/artiste">Artistes</router-link></li>
           <li><router-link to="/programme">Programmation</router-link></li>
+          <li><router-link to="/concert">Concert</router-link></li>
           <li>
             <router-link to="/festival" class="font-Anton text-xl text-red-400">Festival</router-link>
           </li>
@@ -34,7 +35,7 @@
         <ul class="flex list-none items-center gap-10 p-3 pl-14">
           <li class="font-Inter"><router-link to="/artiste">Artiste</router-link></li>
           <li class="font-Inter"><router-link to="/programme">Programmation</router-link></li>
-          <li class="font-Inter"><router-link to="/artiste">Concert</router-link></li>
+          <li class="font-Inter"><router-link to="/concert">Concert</router-link></li>
         </ul>
 
         <div class="flex gap-2 p-3">
