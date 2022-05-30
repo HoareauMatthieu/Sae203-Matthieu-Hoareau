@@ -14,7 +14,7 @@
         <div class="col-span-4 row-span-2 rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">9</div>
         <div class="col-span-4 row-span-2 rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">10</div>
       </div>
-      <bouton>Plus d'informations</bouton>
+      <router-link to="/concert"><bouton>Plus d'informations</bouton></router-link>
     </div>
   </div>
 </template>
