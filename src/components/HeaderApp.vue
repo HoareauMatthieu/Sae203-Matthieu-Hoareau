@@ -17,7 +17,7 @@
         class="fixed inset-0 z-10 translate-x-full bg-black motion-safe:transition-transform motion-safe:duration-1000"
         :class="{ 'translate-x-0': menuOuvert }"
       >
-        <ul class="m-14 mt-24 flex flex-col gap-24 text-center text-white">
+        <ul class="m-14 mt-24 flex flex-col gap-24 text-center text-white sm:text-2xl">
           <li><router-link to="/artiste">Artistes</router-link></li>
           <li><router-link to="/festival">Festival</router-link></li>
           <li><router-link to="/concert">Concert</router-link></li>
