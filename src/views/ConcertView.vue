@@ -2,7 +2,7 @@
   <div class="p-8 pt-36">
     <div class="flex flex-row justify-between">
       <div class="flex flex-col">
-        <h1 class="font-Anton text-3xl">Concert</h1>
+        <h1 class="font-Anton text-4xl sm:text-5xl lg:text-6xl">Concert</h1>
         <h1 class="font-Anton text-3xl text-red-400">23 Mars</h1>
       </div>
       <div class="flex flex-col">
