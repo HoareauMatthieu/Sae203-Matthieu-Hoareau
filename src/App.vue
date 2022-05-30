@@ -3,7 +3,7 @@
     <header><header-app></header-app></header>
   </header>
 
-  <RouterView />
+  <router-view></router-view>
 </template>
 
 <script>

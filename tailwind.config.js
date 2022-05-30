@@ -14,6 +14,9 @@ module.exports = {
         "Anton": "Anton",
         "Inter": "Inter"
       },
+      backgroundImage: {
+        'hero-pattern': "url('public/image/Bgimage.png')",
+      }
     },
 
   },
