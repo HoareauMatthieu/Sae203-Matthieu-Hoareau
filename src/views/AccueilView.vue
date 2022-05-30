@@ -4,7 +4,9 @@
       <icon-logo class="ml-auto mr-auto w-1/2 lg:h-80 lg:w-80" />
       <p class="pt-40 text-center font-Inter lg:pt-32">DU 22 AU 24 MARS 2022</p>
       <div class="ml-auto mr-auto w-2/3">
-        <bouton>Voire le <span class="text-red-400">Programme</span></bouton>
+        <router-link to="/programme"
+          ><bouton>Voire le <span class="text-red-400">Programme</span></bouton></router-link
+        >
       </div>
       <div class="flex flex-row justify-center gap-4 pt-48 pb-60 lg:gap-9">
         <router-link to="/artiste">Artistes</router-link>

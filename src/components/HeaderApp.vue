@@ -1,5 +1,5 @@
  <template>
-  <div class="fixed top-0 left-0 right-0 bg-black bg-opacity-80">
+  <div class="fixed top-0 left-0 right-0 bg-black bg-opacity-60">
     <div class="flex justify-between p-3 lg:hidden">
       <router-link to="/"><icon-logo class="h-16 w-16" /></router-link
       ><button
@@ -40,7 +40,7 @@
 
         <div class="flex gap-2 p-3">
           <bouton class="rounded-2xl bg-red-400 px-7 py-1 font-Anton -tracking-tight text-white"
-            ><router-link to="/programme">Programmation</router-link></bouton
+            ><router-link to="/programme">PROGRAMMATION</router-link></bouton
           >
         </div>
       </div>
