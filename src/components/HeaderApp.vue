@@ -1,6 +1,6 @@
  <template>
   <div class="fixed top-0 left-0 right-0 bg-black bg-opacity-80">
-    <div class="flex justify-between p-3 sm:hidden">
+    <div class="flex justify-between p-3 lg:hidden">
       <router-link to="/"><icon-logo class="h-16 w-16" /> </router-link
       ><button
         class="relative z-50 text-xl"
@@ -28,8 +28,8 @@
       </div>
     </div>
 
-    <div class="hidden p-3 sm:flex">
-      <icon-logo class="h-16 w-16" />
+    <div class="hidden p-3 lg:flex">
+      <icon-logo class="h-24 w-24" />
       <div class="flex flex-auto items-center justify-end text-white">
         <ul class="flex list-none items-center gap-10 p-3 pl-14">
           <li class="font-Inter">Artiste</li>
