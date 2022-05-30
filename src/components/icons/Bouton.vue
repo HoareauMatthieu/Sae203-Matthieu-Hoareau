@@ -22,6 +22,7 @@
       tracking-wide
       text-white
       sm:py-4 sm:text-4xl
+      lg:my-1
     "
   >
     {{ bouton }}
