@@ -17,7 +17,7 @@
       uppercase
       tracking-wide
       text-white
-      hover:border-0 hover:bg-red-400
+      hover:bg-zinc-600
       sm:text-4xl
       lg:text-5xl
     "

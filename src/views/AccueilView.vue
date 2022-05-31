@@ -9,11 +9,11 @@
         >
       </div>
       <div class="flex flex-row justify-center gap-4 pt-48 pb-60 lg:gap-9">
-        <router-link to="/artiste">Artistes</router-link>
+        <router-link to="/artiste" class="hover:text-red-400">Artistes</router-link>
         <span class="w-0.5 bg-white"></span>
-        <router-link to="/concert">Concert</router-link>
+        <router-link to="/concert " class="hover:text-red-400">Concert</router-link>
         <span class="w-0.5 bg-white"></span>
-        <router-link to="/festival">Festival</router-link>
+        <router-link to="/festival" class="hover:text-red-400">Festival</router-link>
       </div>
     </div>
   </main>
