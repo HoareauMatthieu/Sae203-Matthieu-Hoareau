@@ -1,7 +1,7 @@
 <template>
   <div class="p-5 pt-28">
     <div class="">
-      <h1 class="pt-5 text-center font-Anton text-4xl text-white sm:text-5xl lg:text-6xl">Guide de style</h1>
+      <h1 class="titreh1">Guide de style</h1>
       <div class="py-5"></div>
     </div>
 
@@ -26,9 +26,9 @@
 
     <div class="">
       <h2 class="ml-3 font-Anton text-3xl text-red-400 sm:text-4xl lg:text-5xl">Polices</h2>
-      <p class="my-3 ml-3 font-Anton text-4xl font-bold leading-none text-white hover:text-red-400 sm:text-5xl lg:text-6xl">Header 1</p>
-      <p class="my-3 ml-3 font-Anton text-3xl leading-10 text-white hover:text-red-400 sm:text-4xl lg:text-5xl">Header 2</p>
-      <p class="my-3 ml-3 text-xs font-bold leading-8 text-white hover:text-red-400 sm:text-sm lg:py-1 lg:text-base">Body</p>
+      <p class="my-3 ml-3 text-left hover:text-red-400 titreh1">Header 1</p>
+      <p class="my-3 ml-3 font-Anton text-3xl leading-10  hover:text-red-400 sm:text-4xl lg:text-5xl">Header 2</p>
+      <p class="my-3 ml-3 text-xs font-bold leading-8  hover:text-red-400 sm:text-sm lg:py-1 lg:text-base">Body</p>
       <div class="py-5"></div>
     </div>
 
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div class="">
+    <div class="bg-zinc-900 my-11 p-11">
       <h2 class="ml-3 font-Anton text-3xl text-red-400 sm:text-4xl lg:text-5xl">Icones</h2>
 
       <div class="flex-raw flex justify-center gap-9">

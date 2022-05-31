@@ -2,7 +2,7 @@
   <div class="p-8 pt-36">
     <div class="flex flex-row justify-between">
       <div class="flex flex-col">
-        <h1 class="font-Anton text-4xl sm:text-5xl lg:text-6xl">Concert</h1>
+        <h1 class="titreh1 p-0">Concert</h1>
         <h1 class="font-Anton text-3xl text-red-400">23 Mars</h1>
       </div>
       <div class="flex flex-col">
@@ -24,7 +24,7 @@
       <div class="col-span-3 row-span-2 rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">11</div>
       <div class="col-span-2 row-span-2 rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">12</div>
     </div>
-    <h1 class="pb-5 text-center font-Anton text-2xl sm:text-3xl lg:text-6xl">À L’AFFICHE DU CONCERT</h1>
+    <h2 class="pb-5 text-center font-Anton text-2xl sm:text-3xl lg:text-6xl">À L’AFFICHE DU CONCERT</h2>
     <p class="px-12 text-center text-sm lg:px-64 lg:text-base">
       The Weeknd - DJ Snake - Leto - Naps - Jul - Lujipeka - La Fève - Freeze Corlorleone - Zola - Post Malone - Angèle - Shay + Quelques
       surprises...

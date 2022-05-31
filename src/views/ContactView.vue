@@ -1,15 +1,15 @@
 <template>
   <div class="p-8 pt-36">
-    <h1 class="pt-5 text-center font-Anton text-4xl sm:text-5xl lg:pt-9 lg:text-6xl">CONTACT</h1>
-    <p class="pt-3 text-center text-white">Contactes nous sur nos réseaux !</p>
+    <h1 class="titreh1">CONTACT</h1>
+    <p class="pt-3 text-center">Contactes nous sur nos réseaux !</p>
 
     <div class="mt-10 flex flex-row justify-center gap-5">
-      <instagram class="" />
-      <facebook class="" />
-      <twitter class="" />
+      <instagram class="fill-black" />
+      <facebook class="fill-black" />
+      <twitter class="fill-black" />
     </div>
 
-    <p class="py-8 text-white lg:text-center lg:text-xl">Ou ici !</p>
+    <p class="py-8 lg:text-center lg:text-xl">Ou ici !</p>
 
     <div class="w-full">
       <form class="mb-4 rounded pt-6 pb-8 shadow-md lg:px-80">
@@ -61,7 +61,7 @@
             placeholder="Texte"
           />
         </div>
-        <boutonred bouton="ENVOYER" />
+        <boutonred  >Envoyer</boutonred>
       </form>
     </div>
     <h1 class="font-Anton text-3xl">Ou nous trouver ?</h1>

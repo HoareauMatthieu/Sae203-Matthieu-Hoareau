@@ -1,10 +1,10 @@
 <template>
   <div class="p-8 pt-36">
-    <h1 class="pt-9 text-center font-Anton text-4xl sm:text-5xl lg:text-6xl">Mentions légales</h1>
+    <h1 class="pt-9 text-center font-Anton titreh1">Mentions légales</h1>
     <p class="py-5 text-sm">
       Cette page décrit les mentions légales qui vont s’imposer à tous les utilisateurs visitants ce site. En y naviguant, vous vous
       acquittez à les respecter. A prendre en compte que les mentions légales peuvent être changées à tout instant, c’est pour cela que nous
-      vous convions à examiner assidûment. e
+      vous convions à examiner assidûment.
     </p>
     <h2 class="pt-9 font-Anton text-3xl sm:text-4xl lg:text-5xl">Responsables éditorial & légal</h2>
     <p class="py-5 text-sm">Nom de la strucutre - Red Spring Festival</p>

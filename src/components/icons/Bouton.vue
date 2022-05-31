@@ -7,7 +7,8 @@
       h-auto
       w-full
       rounded-lg
-      border-2 border-white
+      border-2 dark:border-white
+      border-black
       bg-transparent
       p-3
       text-center
@@ -16,7 +17,7 @@
       font-bold
       uppercase
       tracking-wide
-      text-white
+   hover:text-white
       hover:bg-zinc-600
       sm:text-4xl
       lg:text-5xl
@@ -28,20 +29,5 @@
 
 
 <script>
-export default {
-  props: {
-    bouton: {
-      type: String,
-      required: true,
-    },
-    boutonpurple: {
-      type: String,
-      required: true,
-    },
-    boutonred: {
-      type: String,
-      required: true,
-    },
-  },
-};
+
 </script>

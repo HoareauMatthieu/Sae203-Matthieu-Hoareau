@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-zinc-900 p-8 pt-36 lg:px-36">
-    <h1 class="rounded-lg bg-hero-pattern2 bg-cover bg-center py-28 text-center font-Anton text-4xl sm:text-5xl lg:text-6xl">
+  <div class=" p-8 pt-36 lg:px-36">
+    <h1 class="rounded-lg bg-hero-pattern2 bg-cover bg-center py-28 text-center titreh1">
       BIENVENUE AU CONCERT DU <span class="text-red-400">PRINTEMPS</span>
     </h1>
 
-    <h1 class="pt-10 font-Anton text-3xl sm:text-4xl lg:text-5xl">RED SPRING <span class="text-red-400">FESTIVAL</span> 2022</h1>
+    <h1 class="pt-10 titreh2">RED SPRING <span class="text-red-400">FESTIVAL</span> 2022</h1>
 
     <p class="py-5 text-xs sm:text-sm lg:py-1 lg:text-base">
       Découvrez en ce mois de Mars de 2022 l’un des festivals les plus ambitieux de France, 3 jours, 3 Scènes, une cinquantaine d’artistes

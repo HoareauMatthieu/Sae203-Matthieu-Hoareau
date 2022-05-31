@@ -14,13 +14,13 @@
       font-bold
       uppercase
       tracking-wide
-      text-white
+      
       hover:bg-red-600
       sm:text-4xl
       lg:text-5xl
     "
   >
-    {{ bouton }}
+
 
     <slot />
   </div>
@@ -28,12 +28,5 @@
 
 
 <script>
-export default {
-  props: {
-    bouton: {
-      type: String,
-      required: true,
-    },
-  },
-};
+
 </script>
