@@ -2,7 +2,6 @@
   <div class="bg-zinc-800 p-6">
     <div class="flex flex-row justify-between">
       <icon-logo class="h-16 w-16" />
-      <sun />
     </div>
     <div class="grid grid-cols-1 gap-10 p-5 text-center md:grid-cols-2">
       <div class="font-thin text-white">

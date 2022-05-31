@@ -17,7 +17,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern': "url('public/image/Bgimage.png')",
-        'hero-pattern2': "url('public/image/bgimagefest.jpg')",
+        'hero-pattern2': "linear-gradient(0deg, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),url('public/image/bgimagefest.jpg');",
       }
     },
 

@@ -1,7 +1,7 @@
 <template>
   <div class="p-8 pt-10 sm:pt-20">
     <h1 class="pt-20 pb-10 text-left titreh1">Artistes</h1>
-    <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-3">
+    <div class="grid grid-flow-row-dense lg:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(100px,1fr))] grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-3">
       <div class="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">1</div>
       <div class="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">2</div>
       <div class="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-800 dark:text-indigo-400">3</div>

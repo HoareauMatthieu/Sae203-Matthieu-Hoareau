@@ -3,11 +3,11 @@
     <div class="flex flex-row justify-between">
       <div class="flex flex-col">
         <h1 class="titreh1 p-0">Concert</h1>
-        <h1 class="font-Anton text-3xl text-red-400">23 Mars</h1>
+        <h1 class="font-Anton text-3xl lg:text-4xl text-red-400">23 Mars</h1>
       </div>
       <div class="flex flex-col">
-        <h1 class="font-Anton text-2xl">Scène 2+3</h1>
-        <h1 class="text-right font-Anton text-2xl">14h</h1>
+        <h1 class="font-Anton text-2xl sm:text-3xl lg:text-4xl">Scène 2+3</h1>
+        <h1 class="text-right font-Anton text-2xl lg:text-4xl">14h</h1>
       </div>
     </div>
     <div class="my-11 grid grid-cols-8 gap-2 text-center">

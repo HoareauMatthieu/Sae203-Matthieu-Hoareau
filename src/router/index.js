@@ -8,6 +8,7 @@ import ConcertView from '../views/ConcertView.vue'
 import FocusView from '../views/FocusView.vue'
 import MentionsView from '../views/MentionsView.vue'
 import GdsView from '../views/GdsView.vue'
+import P404View from '../views/P404View.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,11 @@ const router = createRouter({
     { path: '/focus', name: 'Focus', component: FocusView },
     { path: '/mentions', name: 'Mentions', component: MentionsView },
     { path: '/style-guide', name: 'style-guide', component: GdsView },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'page404',
+      component: P404View
+    },
     // ici les autre routes
   ]
 })
