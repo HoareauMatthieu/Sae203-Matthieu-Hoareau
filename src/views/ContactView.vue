@@ -12,10 +12,10 @@
     <p class="py-8 lg:text-center lg:text-xl">Ou ici !</p>
 
     <div class="w-full">
-      <form class="mb-4 rounded pt-6 pb-8 shadow-md lg:px-80">
+      <form class="mb-4 rounded pt-6 pb-8  lg:px-80">
         <div class="mb-4">
           <input
-            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight text-white"
+            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight "
             id="prenom"
             type="text"
             placeholder="Prénom"
@@ -23,7 +23,7 @@
         </div>
         <div class="mb-4">
           <input
-            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight text-white"
+            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight "
             id="nom"
             type="text"
             placeholder="Nom"
@@ -31,7 +31,7 @@
         </div>
         <div class="mb-4">
           <input
-            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight text-white"
+            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight"
             id="mail"
             type="text"
             placeholder="Adresse mail"
@@ -39,7 +39,7 @@
         </div>
         <div class="mb-4">
           <input
-            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight text-white"
+            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight "
             id="tel"
             type="text"
             placeholder="Tel :"
@@ -47,17 +47,18 @@
         </div>
         <div class="mb-4">
           <input
-            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight text-white"
+            class="w-full appearance-none rounded border bg-transparent py-2 px-3 leading-tight "
             id="objet"
             type="text"
             placeholder="Objet"
           />
         </div>
         <div class="mb-4">
-          <input
-            class="w-full appearance-none rounded border bg-transparent py-2 px-3 pb-44 leading-tight text-white"
+          <textarea
+            class="w-full appearance-none rounded border bg-transparent py-2 px-3  leading-tight h-48 "
             id="texte"
             type="text"
+            
             placeholder="Texte"
           />
         </div>

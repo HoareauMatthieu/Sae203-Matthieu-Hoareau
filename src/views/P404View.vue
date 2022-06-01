@@ -7,7 +7,7 @@
 
 <form class="flex flex-col w-2/3 ml-auto mr-auto" action="https://duckduckgo.com/" method="GET" 
     >
-    <input class="text-black" type="text" id="q" name="q" x-model="q">
+    <input class="text-black" type="text" id="q" name="q" x-model="q" placeholder="Recherche sur Duckduck Go">
     <button class="font-Anton titreh1 border-2 border-white p-2 mt-8 rounded-lg" type="submit">Rechercher</button>
 </form>  
 

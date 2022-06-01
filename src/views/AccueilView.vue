@@ -2,6 +2,7 @@
   <main>
     <div class="bg-black bg-hero-pattern bg-cover bg-center pt-36">
       <icon-logo class="ml-auto mr-auto w-1/2 lg:h-80 lg:w-80" />
+      <span class="sr-only">Accueil</span>
       <p class="pt-40 text-center font-Inter lg:pt-32 text-white">DU 22 AU 24 MARS 2022</p>
       <div class="ml-auto mr-auto w-2/3">
         <router-link to="/programme"
