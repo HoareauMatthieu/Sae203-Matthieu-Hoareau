@@ -66,7 +66,7 @@
       </form>
     </div>
     <h1 class="font-Anton text-3xl">Ou nous trouver ?</h1>
-    <img src="public/image/carte.png" alt="carte" class="ml-auto mr-auto w-2/3 lg:w-1/3" />
+    <img src="/image/carte.png" alt="carte" class="ml-auto mr-auto w-2/3 lg:w-1/3" />
     <p class="py-8 text-center text-sm">12 Rue de Saisset - Montrouge 92120</p>
   </div>
 </template>

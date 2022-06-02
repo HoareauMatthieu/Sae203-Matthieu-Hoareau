@@ -1,6 +1,6 @@
 <template>
   <div class="p-8 pt-36">
-    <img class="ml-auto mr-auto w-full rounded-lg sm:w-1/2" src="public/image/Laylow.jpg" alt="Laylow" />
+    <img class="ml-auto mr-auto w-full rounded-lg sm:w-1/2" src="/image/Laylow.jpg" alt="Laylow" />
     <h1 class="pt-9 titreh1 text-left">LAYLOW</h1>
     <p class="py-5 text-sm">Hip/Hop - Musique électronique</p>
     <h2 class="pt-3 font-Anton titreh2">RAPPEUR <span class="text-red-400">NEXT</span>-GEN</h2>

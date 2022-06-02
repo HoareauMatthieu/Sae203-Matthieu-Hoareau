@@ -11,7 +11,7 @@
       connus à l’international, tous réunis pour fêter les premiers rayons du soleil de l’année.
     </p>
 
-    <img src="image/illuimage1.png" alt="image de concert" class="ml-auto mr-auto w-full sm:w-2/3 lg:w-1/2 lg:py-10" />
+    <img src="/image/illuimage1.png" alt="image de concert" class="ml-auto mr-auto w-full sm:w-2/3 lg:w-1/2 lg:py-10" />
 
     <p class="py-5 text-xs sm:text-sm lg:py-1 lg:text-base">
       Entrez dans l’aventure d’un festival unique en France et proche de Paris offrant une experience de Festival Taille XXL. Avec ses 90
@@ -19,13 +19,13 @@
       du Red Spring Festival !
     </p>
 
-    <img src="image/imgaefoule.png" alt="image de foule" class="ml-auto mr-auto w-full sm:w-2/3 lg:w-1/2 lg:py-10" />
+    <img src="/image/imgaefoule.png" alt="image de foule" class="ml-auto mr-auto w-full sm:w-2/3 lg:w-1/2 lg:py-10" />
 
     <router-link to="/programme"
       ><bouton class="my-4">Voire le <span class="text-red-400">programme</span> </bouton></router-link
     >
 
-    <img src="image/festivalnuit.png" alt="image du festival" class="sm: ml-auto mr-auto w-full sm:w-2/3 lg:w-1/2 lg:py-10" />
+    <img src="/image/festivalnuit.png" alt="image du festival" class="sm: ml-auto mr-auto w-full sm:w-2/3 lg:w-1/2 lg:py-10" />
 
     <router-link to="/programme"
       ><bouton class="my-4">Voire le <span class="text-purple-400">programme</span></bouton></router-link
