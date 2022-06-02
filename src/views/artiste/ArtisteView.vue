@@ -1,7 +1,7 @@
 <template>
   <div class=" lg:pt-32 pt-24 p-8">
-<div class="flex flex-row gap-10 justify-between">
-<TrashIcon class="w-11"/><router-link to="/create-art"><bouton class="text-red-400 text-sm sm:text-2xl">Ajouter un artiste</bouton></router-link></div>
+
+<router-link to="/create-art"><bouton class="text-red-400 text-base sm:text-2xl">Ajouter un artiste</bouton></router-link>
         
  
   
@@ -14,7 +14,11 @@
                   <div class="flex flex-col justify-center">
                     <p class="font-Anton text-center text-base lg:text-3xl text-red-400 dark:text-white sm:text-2xl">{{ artiste.nom }}</p>
                     
-                      <router-link :to="{ name: 'custom-artiste', params: { id: artiste.id } }"><div class="flex flex-row justify-center"><PencilAltIcon class="h-5"/><PencilAltIcon class="h-5"/></div></router-link>
+                    <div class="flex flex-row justify-center">
+                      <router-link :to="{ name: 'custom-artiste', params: { id: artiste.id } }"><PencilAltIcon class="h-5"/></router-link>
+                       <router-link :to="{ name: 'delete-artiste', params: { id: artiste.id } }"><TrashIcon class="h-5 stroke-red-400"/></router-link>
+                      </div>
+                      
                    
                   </div>
               </div>

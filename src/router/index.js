@@ -11,6 +11,8 @@ import GdsView from '../views/GdsView.vue'
 import P404View from '../views/P404View.vue'
 import CreateartisteView from '../views/artiste/CreateartisteView.vue'
 import CustomartisteView from '../views/artiste/CustomartisteView.vue'
+import DeleteartisteView from '../views/artiste/DeleteartisteView.vue'
+import CategorieView from '../views/categorie/CategorieView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +28,9 @@ const router = createRouter({
     { path: '/style-guide', name: 'style-guide', component: GdsView },
     { path: '/create-art', name: 'create-artiste', component: CreateartisteView },
     { path: '/custom-art', name: 'custom-artiste', component: CustomartisteView },
+    { path: '/custom-art', name: 'custom-artiste', component: CustomartisteView },
+    { path: '/delete-art', name: 'delete-artiste', component: DeleteartisteView },
+    { path: '/categorie', name: 'categorie', component: CategorieView },
     {
       path: '/:pathMatch(.*)*',
       name: 'page404',

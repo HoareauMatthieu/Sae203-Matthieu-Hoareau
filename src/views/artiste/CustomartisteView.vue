@@ -3,7 +3,7 @@
     <form enctype="multipart/form-data" >
       
        
-          <h1 class="titreh1">Mise à jour participant</h1>
+          <h1 class="titreh1">Mise à jour de l'artiste</h1>
         
 
         
@@ -19,7 +19,7 @@
                
                   <div>
                       <h2 class="text-xl">Nom</h2>      
-                     <input class=" p-1 border-2 border-white bg-transparent rounded-sm w-1/3" placeholder="Nom de la personne" v-model="artiste.nom" required />
+                     <input class=" p-1 border-2 dark:border-white border-red-400 bg-transparent  max-w-2xl w-full rounded-md" placeholder="Nom de la personne" v-model="artiste.nom" required />
                   </div>
           
  
@@ -27,7 +27,7 @@
                 
                   <div>
                       <h2 class="text-xl">Image</h2>
-                      <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
+                      <input type="file" class="border-red-400 border-2 p-2 dark:border-white max-w-2xl w-full rounded-md" ref="file" id="file" @change="previewImage" />
                   </div>
 
 
@@ -40,7 +40,7 @@
                   <div>
                       <h2 class="text-xl">Catégorie</h2>
                              
-                    <select class="p-1 border-2 border-white bg-transparent rounded-sm w-1/3" v-model="artiste.cat">
+                    <select class="p-1 border-2 dark:border-white border-red-400 bg-transparent  max-w-2xl w-full rounded-md" v-model="artiste.cat">
                       <option selected disabled>Sélectionner une catégorie</option>
                       <option v-for="categorie in listeCat" :key="categorie.libelle">
                         {{ categorie.libelle }}

@@ -37,7 +37,7 @@
       <div class="flex flex-row justify-center gap-4 pt-48 pb-60 lg:gap-9">
         <router-link to="/artiste" class="hover:text-red-400 text-white">Artistes</router-link>
         <span class="w-0.5 bg-white"></span>
-        <router-link to="/concert " class="hover:text-red-400 text-white">Concert</router-link>
+        <router-link to="/concert" class="hover:text-red-400 text-white">Concert</router-link>
         <span class="w-0.5 bg-white"></span>
         <router-link to="/festival" class="hover:text-red-400 text-white">Festival</router-link>
       </div>
