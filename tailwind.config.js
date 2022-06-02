@@ -16,8 +16,8 @@ module.exports = {
         "Inter": "Inter"
       },
       backgroundImage: {
-        'hero-pattern': "url('/image/Bgimage.png')",
-        'hero-pattern2': "linear-gradient(0deg, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),url('/image/bgimagefest.jpg');",
+        'hero-pattern': "url('/public/image/Bgimage.png')",
+        'hero-pattern2': "linear-gradient(0deg, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),url('/public/image/bgimagefest.jpg');",
       }
     },
 
