@@ -30,7 +30,7 @@
       lg:text-5xl
     "
   >
-    Voire le <span class="text-red-400">Programme</span>
+    Voir le <span class="text-red-400">Programme</span>
   </div></router-link
         >
       </div>

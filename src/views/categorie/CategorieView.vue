@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-52 p-10">
+    <div class="lg:pt-36 sm:pt-24 pt-20 p-6">
         
              <h1 class="titreh1">Liste des styles</h1>
       
@@ -15,7 +15,7 @@
             </bouton>
             </div>
 
-                              <hr>
+        <hr>
         
       
         </form>
@@ -31,12 +31,17 @@
                       
                         
                                 
-                                 <div class="py-5 flex flex-col gap-3">
+                                 <div class="py-5 flex flex-col gap-3
+                                 
+                                 
+">
                                      <h2 class="text-xl">Filtrage</h2>
-                                        <input type="text" class="p-2 border-2 dark:border-white border-red-400 bg-transparent  w-full rounded-md" placeholder="Rechercher un style" v-model="filter" />
-                                        <bouton class="w-1/5 " type="button"  title="Filtrage">
-                                          Filtrage
-                                        </bouton>
+                                        <div class="flex flex-row gap-2">
+                                          <input type="text" class="p-2 border-2 dark:border-white border-red-400 bg-transparent  w-full rounded-md" placeholder="Rechercher un style" v-model="filter" />
+                                          <button class="bg-red-400 rounded-lg text-lg lg:text-2xl px-4" type="button"  title="Filtrage">
+                                            Filtrage
+                                          </button>
+                                        </div>
                                  </div>
                        
                            
@@ -47,21 +52,22 @@
               
                     
                        
-                          <form 
-                            v-for="categorie in filterByName" :key="categorie.id">
-                   
-                             
-                                <span class="input-group-text">Nom</span>
-                         
-                              <input type="text" class="form-control" v-model='categorie.libelle' required />
-                              <PencilAltIcon class="w-5 " type="button"  @click="updateCat(categorie)" title="Modification"/>
-                               
-                            
-                              <TrashIcon class=" w-5 btn btn-light" type="button" @click="deleteCat(categorie)" title="Suppression"/>
-                            
-                           
+                          
+                            <form
                       
-                          </form>
+                            
+                              v-for="categorie in filterByName" :key="categorie.id">
+                            <div class="flex flex-row   ">
+                                  
+                                <input type="text" class="bg-transparent font-Anton uppercase text-2xl lg:text-4xl" v-model='categorie.libelle' required />
+                                <PencilAltIcon class="w-5  " type="button"  @click="updateCat(categorie)" title="Modification"/>
+                            
+                            
+                                <TrashIcon class=" w-5  btn btn-light stroke-red-400" type="button" @click="deleteCat(categorie)" title="Suppression"/>
+                                </div>
+                            
+                            </form>
+                      
                    
                     
            

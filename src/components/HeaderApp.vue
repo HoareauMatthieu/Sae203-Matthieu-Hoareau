@@ -17,10 +17,11 @@
         class="fixed inset-0 z-10 translate-x-full dark:bg-black bg-zinc-300 motion-safe:transition-transform motion-safe:duration-1000"
         :class="{ 'translate-x-[5rem]': menuOuvert }"
       >
-        <ul class="m-14 mt-24 flex flex-col gap-24 text-center  sm:text-2xl">
+        <ul class="m-14 mt-24 flex flex-col gap-16 text-center  sm:text-2xl">
           <li><router-link to="/artiste" class="hover:text-red-400">Artistes</router-link></li>
           <li><router-link to="/festival" class="hover:text-red-400">Festival</router-link></li>
           <li><router-link to="/concert" class="hover:text-red-400">Concert</router-link></li>
+          <li><router-link to="/categorie" class="hover:text-red-400">Style</router-link></li>
           <li>
             <router-link to="/programme" class="font-Anton text-xl text-red-400 hover:text-red-600">Programmation</router-link>
           </li>
@@ -36,6 +37,7 @@
           <li class="font-Inter hover:text-red-400"><router-link to="/artiste">Artistes</router-link></li>
           <li class="font-Inter hover:text-red-400"><router-link to="/festival">Festival</router-link></li>
           <li class="font-Inter hover:text-red-400"><router-link to="/concert">Concert</router-link></li>
+          <li class="font-Inter hover:text-red-400"><router-link to="/categorie">Catégorie</router-link></li>
         </ul>
 
         <div class="flex gap-2 p-3">
