@@ -1,53 +1,45 @@
 <template>
-  <div class="pt-28 p-11">
+  <div class="p-11 pt-28">
     <form enctype="multipart/form-data">
-     
-        
-            <h1 class="titreh1">Mise à jour participant</h1>
-        
+      <h1 class="titreh1">Mise à jour participant</h1>
 
-    
-          
-<div class="flex flex-col gap-6 mt-6">
-             
-                <img class="ml-auto mr-auto" :src="photoActuelle" />
-  
+      <div class="mt-6 flex flex-col gap-6">
+        <img class="ml-auto mr-auto" :src="photoActuelle" />
 
-
-            
-              
-
-                 <div>
-                     <h2 class="text-xl">Nom</h2> 
-                     <input  class=" p-1 border-2 max-w-2xl border-white bg-transparent rounded-sm w-full" placeholder="Nom de la personne" v-model="artiste.nom" disabled />
-                 </div>
-           
-
-            
-
-            
-                <div>
-                    <h2 class="text-xl">Catégorie</h2>
-                    <input  class=" p-1 border-2 max-w-2xl border-white bg-transparent rounded-sm w-full" v-model="artiste.cat" disabled />
-                </div>
-         
-            
-
-
-          <h2 class="text-sm" role="alert">
-            Attention vous allez supprimer cet artiste, cette action est irréversible !!
-          </h2>
-</div>
-   
-
-        <div class="flex flex-row gap-4 mt-4">
-          <bouton type="button" class="text-red-400" @click="deleteArtiste">Supprimer</bouton>
-          <boutonred class="btn btn-dark">
-            <RouterLink to="/artiste">Cancel</RouterLink>
-          </boutonred>
+        <div>
+          <h2 class="text-xl">Nom</h2>
+          <input
+            class="w-full max-w-2xl rounded-sm border-2 border-white bg-transparent p-1"
+            placeholder="Nom de la personne"
+            v-model="artiste.nom"
+            disabled
+          />
+        </div>
+        <div>
+          <h2 class="text-xl">Date</h2>
+          <input
+            type="date"
+            class="w-full max-w-2xl rounded-sm border-2 border-white bg-transparent p-1"
+            placeholder="date de concert"
+            v-model="artiste.date"
+            disabled
+          />
         </div>
 
- 
+        <div>
+          <h2 class="text-xl">Catégorie</h2>
+          <input class="w-full max-w-2xl rounded-sm border-2 border-white bg-transparent p-1" v-model="artiste.cat" disabled />
+        </div>
+
+        <h2 class="text-sm" role="alert">Attention vous allez supprimer cet artiste, cette action est irréversible !!</h2>
+      </div>
+
+      <div class="mt-4 flex flex-row gap-4">
+        <bouton type="button" class="text-red-400" @click="deleteArtiste">Supprimer</bouton>
+        <boutonred class="btn btn-dark">
+          <RouterLink to="/artiste">Cancel</RouterLink>
+        </boutonred>
+      </div>
     </form>
   </div>
 </template>
@@ -84,7 +76,7 @@ import {
 
 export default {
   name: "DeleteartisteView",
-   components: { Bouton, Boutonred},
+  components: { Bouton, Boutonred },
   data() {
     return {
       artiste: {
@@ -92,6 +84,7 @@ export default {
         nom: null, // son nom
         cat: null, // son nom
         photo: null, // sa photo (nom du fichier)
+        date: null,
       },
 
       refArtiste: null, // Référence du artiste à modifier

@@ -1,57 +1,61 @@
 <template>
-  <div class="pt-28 p-11">
+  <div class="p-11 pt-28">
     <form enctype="multipart/form-data">
       <div class="">
-        
-          <h1 class="titreh1">Création participant</h1>
+        <h1 class="titreh1">Création participant</h1>
 
-                      <div class="flex flex-col gap-6 mt-6">
-                        <img class="ml-auto mr-auto" :src="imageData" />
-                        
-                        <div>
-                          <h2 class="text-xl">Nom</h2>
-                          <input class=" p-1 border-2 max-w-2xl dark:border-white border-red-400 bg-transparent rounded-md w-full"  placeholder="Nom de la personne" v-model="artiste.nom" required />
-                        </div>
-                        
-                        
-                        
-                         <div>
-                           <h2 class="text-xl">Image</h2>
-                            <input  class="border-red-400 border-2 p-2 dark:border-white max-w-2xl w-full rounded-md" type="file"  ref="file" id="file" @change="previewImage" />
-                         </div>
-                        
-                        
-                        
-                        
-                        
-                          <div>
-                            <h2 class="text-xl">Catégorie</h2>
-                        
-                            <select class=" p-1 border-2 max-w-2xl w-full dark:border-white border-red-400 bg-transparent rounded-md " v-model="artiste.cat">
-                            <option selected disabled>Sélectionner une catégorie</option>
-                            <option   v-for="categorie in listeCat" :key="categorie.libelle">
-                              {{ categorie.libelle }}
-                            </option>
-                            </select>
-                          </div>
-                      </div>
-                   
+        <div class="mt-6 flex flex-col gap-6">
+          <img class="ml-auto mr-auto" :src="imageData" />
 
+          <div>
+            <h2 class="text-xl">Nom</h2>
+            <input
+              class="w-full max-w-2xl rounded-md border-2 border-red-400 bg-transparent p-1 dark:border-white"
+              placeholder="Nom de la personne"
+              v-model="artiste.nom"
+              required
+            />
+          </div>
 
-                 <div>
-                  
+          <div>
+            <h2 class="text-xl">Image</h2>
+            <input
+              class="w-full max-w-2xl rounded-md border-2 border-red-400 p-2 dark:border-white"
+              type="file"
+              ref="file"
+              id="file"
+              @change="previewImage"
+            />
+          </div>
 
-                 </div>
-                
-                           
-            
-              
-          
+          <div>
+            <h2 class="text-xl">Date</h2>
+            <input
+              type="date"
+              class="w-full max-w-2xl rounded-md border-2 border-red-400 bg-transparent p-1 dark:border-white"
+              placeholder="Date de concert"
+              v-model="artiste.date"
+              required
+            />
+          </div>
 
-        <div >
+          <div>
+            <h2 class="text-xl">Catégorie</h2>
 
-          <div class="flex flex-row gap-4 mt-4">
-            <bouton type="button" class="text-red-400" @click="createArtiste" >Creer</bouton>
+            <select class="w-full max-w-2xl rounded-md border-2 border-red-400 bg-transparent p-1 dark:border-white" v-model="artiste.cat">
+              <option selected disabled>Sélectionner une catégorie</option>
+              <option v-for="categorie in listeCat" :key="categorie.libelle">
+                {{ categorie.libelle }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div></div>
+
+        <div>
+          <div class="mt-4 flex flex-row gap-4">
+            <bouton type="button" class="text-red-400" @click="createArtiste">Creer</bouton>
             <boutonred>
               <router-link to="/artiste">Cancel</router-link>
             </boutonred>
@@ -88,7 +92,7 @@ import {
 
 export default {
   name: "CreateartisteView",
-  components: { Bouton, Boutonred},
+  components: { Bouton, Boutonred },
   data() {
     return {
       imageData: null, // Image prévisualisée
@@ -98,6 +102,7 @@ export default {
         nom: null, // son nom
         photo: null, // sa photo (nom du fichier)
         cat: null, // sa catégorie
+        date: null,
       },
     };
   },
@@ -126,48 +131,46 @@ export default {
       });
     },
 
+    previewImage: function (event) {
+      // Mise à jour de la photo de l'artiste
+      this.file = this.$refs.file.files[0];
+      // Récupérer le nom du fichier pour la photo de l'artiste
+      this.artiste.photo = this.file.name;
+      // Reference to the DOM input element
+      // Reference du fichier à prévisualiser
+      var input = event.target;
+      // On s'assure que l'on a au moins un fichier à lire
+      if (input.files && input.files[0]) {
+        // Creation d'un filereader
+        // Pour lire l'image et la convertir en base 64
+        var reader = new FileReader();
+        // fonction callback appellée lors que le fichier a été chargé
+        reader.onload = (e) => {
+          // Read image as base64 and set to imageData
+          // lecture du fichier pour mettre à jour
+          // la prévisualisation
+          this.imageData = e.target.result;
+        };
+        // Demarrage du reader pour la transformer en data URL (format base 64)
+        reader.readAsDataURL(input.files[0]);
+      }
+    },
+    async createArtiste() {
+      // Obtenir storage Firebase
+      const storage = getStorage();
+      // Référence de l'image à uploader
+      const refStorage = ref(storage, "artiste/" + this.artiste.photo);
+      // Upload de l'image sur le Cloud Storage
+      await uploadString(refStorage, this.imageData, "data_url").then((snapshot) => {
+        console.log("Uploaded a base64 string");
 
-  previewImage: function (event) {
-    // Mise à jour de la photo de l'artiste
-    this.file = this.$refs.file.files[0];
-    // Récupérer le nom du fichier pour la photo de l'artiste
-    this.artiste.photo = this.file.name;
-    // Reference to the DOM input element
-    // Reference du fichier à prévisualiser
-    var input = event.target;
-    // On s'assure que l'on a au moins un fichier à lire
-    if (input.files && input.files[0]) {
-      // Creation d'un filereader
-      // Pour lire l'image et la convertir en base 64
-      var reader = new FileReader();
-      // fonction callback appellée lors que le fichier a été chargé
-      reader.onload = (e) => {
-        // Read image as base64 and set to imageData
-        // lecture du fichier pour mettre à jour
-        // la prévisualisation
-        this.imageData = e.target.result;
-      };
-      // Demarrage du reader pour la transformer en data URL (format base 64)
-      reader.readAsDataURL(input.files[0]);
-    }
+        // Création de l'artiste sur le Firestore
+        const db = getFirestore();
+        const docRef = addDoc(collection(db, "artiste"), this.artiste);
+      });
+      // redirection sur la liste des  artistes
+      this.$router.push("/artiste");
+    },
   },
-  async createArtiste() {
-    // Obtenir storage Firebase
-    const storage = getStorage();
-    // Référence de l'image à uploader
-    const refStorage = ref(storage, "artiste/" + this.artiste.photo);
-    // Upload de l'image sur le Cloud Storage
-    await uploadString(refStorage, this.imageData, "data_url").then((snapshot) => {
-      console.log("Uploaded a base64 string");
-
-      // Création de l'artiste sur le Firestore
-      const db = getFirestore();
-      const docRef = addDoc(collection(db, "artiste"), this.artiste);
-    });
-    // redirection sur la liste des  artistes
-    this.$router.push("/artiste");
-  },
-  
-}
-  }
+};
 </script>

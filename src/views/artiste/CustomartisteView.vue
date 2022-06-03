@@ -1,67 +1,61 @@
 <template>
-  <div class="pt-28 p-11">
-    <form enctype="multipart/form-data" >
-      
-       
-          <h1 class="titreh1">Mise à jour de l'artiste</h1>
-        
+  <div class="p-11 pt-28">
+    <form enctype="multipart/form-data">
+      <h1 class="titreh1">Mise à jour de l'artiste</h1>
 
-        
-          
-            <div class="flex flex-col gap-6 mt-6">
-              
-                <img class="ml-auto mr-auto" :src="imageData" />
-           
-          
+      <div class="mt-6 flex flex-col gap-6">
+        <img class="ml-auto mr-auto" :src="imageData" />
 
-            
-       
-               
-                  <div>
-                      <h2 class="text-xl">Nom</h2>      
-                     <input class=" p-1 border-2 dark:border-white border-red-400 bg-transparent  max-w-2xl w-full rounded-md" placeholder="Nom de la personne" v-model="artiste.nom" required />
-                  </div>
-          
- 
+        <div>
+          <h2 class="text-xl">Nom</h2>
+          <input
+            class="w-full max-w-2xl rounded-md border-2 border-red-400 bg-transparent p-1 dark:border-white"
+            placeholder="Nom de la personne"
+            v-model="artiste.nom"
+            required
+          />
+        </div>
 
-                
-                  <div>
-                      <h2 class="text-xl">Image</h2>
-                      <input type="file" class="border-red-400 border-2 p-2 dark:border-white max-w-2xl w-full rounded-md" ref="file" id="file" @change="previewImage" />
-                  </div>
+        <div>
+          <h2 class="text-xl">Date</h2>
+          <input
+            type="date"
+            class="w-full max-w-2xl rounded-md border-2 border-red-400 bg-transparent p-1 dark:border-white"
+            placeholder="Date de concert"
+            v-model="artiste.date"
+            required
+          />
+        </div>
 
+        <div>
+          <h2 class="text-xl">Image</h2>
+          <input
+            type="file"
+            class="w-full max-w-2xl rounded-md border-2 border-red-400 p-2 dark:border-white"
+            ref="file"
+            id="file"
+            @change="previewImage"
+          />
+        </div>
 
-           
-              
-             
-       
-              
-               
-                  <div>
-                      <h2 class="text-xl">Catégorie</h2>
-                             
-                    <select class="p-1 border-2 dark:border-white border-red-400 bg-transparent  max-w-2xl w-full rounded-md" v-model="artiste.cat">
-                      <option selected disabled>Sélectionner une catégorie</option>
-                      <option v-for="categorie in listeCat" :key="categorie.libelle">
-                        {{ categorie.libelle }}
-                      </option>
-                     </select>
-                  </div>
-            </div>
-    
-           
-       
-       
-<div class="flex flex-row gap-4 mt-4">
-        
-          <bouton type="button" class="text-red-400" @click="updateArtiste">Modifier</bouton>
-          <boutonred>
-            <RouterLink to="/artiste">Cancel</RouterLink>
-          </boutonred>
+        <div>
+          <h2 class="text-xl">Catégorie</h2>
 
-</div>
-      
-      
+          <select class="w-full max-w-2xl rounded-md border-2 border-red-400 bg-transparent p-1 dark:border-white" v-model="artiste.cat">
+            <option selected disabled>Sélectionner une catégorie</option>
+            <option v-for="categorie in listeCat" :key="categorie.libelle">
+              {{ categorie.libelle }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-4 flex flex-row gap-4">
+        <bouton type="button" class="text-red-400" @click="updateArtiste">Modifier</bouton>
+        <boutonred>
+          <RouterLink to="/artiste">Cancel</RouterLink>
+        </boutonred>
+      </div>
     </form>
   </div>
 </template>
@@ -98,7 +92,7 @@ import {
 
 export default {
   name: "CustomartisteView",
-  components: { Bouton, Boutonred},
+  components: { Bouton, Boutonred },
   data() {
     return {
       imageData: null, // Image prévisualisée
@@ -109,6 +103,7 @@ export default {
         nom: "", // son nom
         cat: "", // sa catégorie
         photo: "", // sa photo (nom du fichier)
+        date: "",
       },
 
       refArtiste: null, // Référence du participant à modifier
