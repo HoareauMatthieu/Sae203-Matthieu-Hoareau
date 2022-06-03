@@ -14,5 +14,7 @@
         @apply font-Anton text-3xl sm:text-4xl lg:text-5xl
     }
 
-   
+    ::-webkit-calendar-picker-indicator {
+        @apply dark:invert;
+    }
 }
