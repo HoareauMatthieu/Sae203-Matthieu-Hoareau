@@ -1,18 +1,18 @@
 <template>
-  <div class="p-8 pt-32">
+  <div class="p-5 pt-32">
     <div class="flex flex-row justify-between">
       <h1 class="pb-11 font-Anton text-3xl sm:text-5xl lg:text-6xl">Programmation du <span class="text-red-400"> Festival </span></h1>
       <icon-logo class="h-12 w-12"></icon-logo>
     </div>
-    <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4">
-      <card-app date="23 Mars" />
-    </div>
-  </div>
 
-  <div class="flex flex-row">
-    <div v-for="[date, listeDate] in artistesParDate" :key="date">
-      <h1>{{ date }}</h1>
-      <img v-for="artiste in listeDate" :key="artiste.id" :src="artiste.photo" :alt="artiste.nom" />
+    <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-3">
+      <div class="rounded-lg border-2 border-white p-3" v-for="[date, listeDate] in artistesParDate" :key="date">
+        <h1 class="titreh2 p-3 text-left font-Anton text-red-400">{{ date }}</h1>
+        <div class="grid grid-cols-3 gap-2">
+          <img class="w-full rounded-lg" v-for="artiste in listeDate" :key="artiste.id" :src="artiste.photo" :alt="artiste.nom" />
+        </div>
+        <router-link to="/concert"><bouton>Plus d'infos</bouton></router-link>
+      </div>
     </div>
   </div>
 
@@ -39,6 +39,7 @@
 <script>
 import Bouton from "../components/icons/Bouton.vue";
 import { groupBy } from "lodash";
+import IconLogo from "../components/icons/IconLogo.vue";
 
 import {
   getFirestore, // Obtenir le Firestore
@@ -61,13 +62,14 @@ import {
   uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 export default {
-  components: { Bouton },
+  components: { Bouton, IconLogo },
   props: {
     date: {
       type: String,
       required: true,
     },
   },
+
   data() {
     return {
       listeArtiste: [], // Liste des artistes

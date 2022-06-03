@@ -26,9 +26,9 @@
 
     <div class="">
       <h2 class="ml-3 font-Anton text-3xl text-red-400 sm:text-4xl lg:text-5xl">Polices</h2>
-      <p class="my-3 ml-3 text-left hover:text-red-400 titreh1">Header 1</p>
-      <p class="my-3 ml-3 font-Anton text-3xl leading-10  hover:text-red-400 sm:text-4xl lg:text-5xl">Header 2</p>
-      <p class="my-3 ml-3 text-xs font-bold leading-8  hover:text-red-400 sm:text-sm lg:py-1 lg:text-base">Body</p>
+      <p class="titreh1 my-3 ml-3 text-left hover:text-red-400">Header 1</p>
+      <p class="my-3 ml-3 font-Anton text-3xl leading-10 hover:text-red-400 sm:text-4xl lg:text-5xl">Header 2</p>
+      <p class="my-3 ml-3 text-xs font-bold leading-8 hover:text-red-400 sm:text-sm lg:py-1 lg:text-base">Body</p>
       <div class="py-5"></div>
     </div>
 
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div class="bg-zinc-900 my-11 p-11">
+    <div class="my-11 bg-zinc-900 p-11">
       <h2 class="ml-3 font-Anton text-3xl text-red-400 sm:text-4xl lg:text-5xl">Icones</h2>
 
       <div class="flex-raw flex justify-center gap-9">
@@ -66,7 +66,7 @@
 <script >
 import Bouton from "../components/icons/Bouton.vue";
 import Boutonred from "../components/icons/Boutonred.vue";
-import CardApp from "../components/CardApp.vue";
+
 import HeaderApp from "../components/HeaderApp.vue";
 import FooterApp from "../components/FooterApp.vue";
 import Facebook from "../components/icons/Facebook.vue";
@@ -83,7 +83,7 @@ export default {
     MenuAlt3Icon,
     Bouton,
     Boutonred,
-    CardApp,
+
     HeaderApp,
     FooterApp,
     Icon2Logo,

@@ -1,7 +1,7 @@
 <template>
   <div class="p-11 pt-28">
     <form enctype="multipart/form-data">
-      <h1 class="titreh1">Mise à jour participant</h1>
+      <h1 class="titreh1">SUPPRIMER L'ARTISTE ?</h1>
 
       <div class="mt-6 flex flex-col gap-6">
         <img class="ml-auto mr-auto" :src="photoActuelle" />
