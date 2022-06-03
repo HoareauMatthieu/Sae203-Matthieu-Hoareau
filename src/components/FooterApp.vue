@@ -19,7 +19,7 @@
     </div>
     <hr class="m-4 border-t-2 border-indigo-100" />
     <div class="flex flex-col items-center">
-      <p class="text-sm text-white">©2021 Red Spring Festiaval. All rights reserved</p>
+      <p class="text-center text-sm text-white">©2021 Red Spring Festiaval. All rights reserved</p>
       <div class="flex flex-row gap-5 pt-7">
         <instagram />
         <facebook />
