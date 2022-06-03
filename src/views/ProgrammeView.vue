@@ -6,7 +6,7 @@
     </div>
 
     <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-3">
-      <div class="rounded-lg border-2 border-white p-3" v-for="[date, listeDate] in artistesParDate" :key="date">
+      <div class="rounded-lg border-2 border-black p-3 dark:border-white" v-for="[date, listeDate] in artistesParDate" :key="date">
         <h1 class="titreh2 p-3 text-left font-Anton text-red-400">{{ date }}</h1>
         <div class="grid grid-cols-3 gap-2">
           <img class="w-full rounded-lg" v-for="artiste in listeDate" :key="artiste.id" :src="artiste.photo" :alt="artiste.nom" />

@@ -1,41 +1,35 @@
 <template>
-  <div class=" lg:pt-32 pt-24 p-8">
+  <div class="p-8 pt-24 lg:pt-32">
+    <router-link to="/create-art"><bouton class="text-base text-red-400 sm:text-2xl">Ajouter un artiste</bouton></router-link>
 
-<router-link to="/create-art"><bouton class="text-red-400 text-base sm:text-2xl">Ajouter un artiste</bouton></router-link>
-        
- 
-  
+    <div
+      class="
+        grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(100px,1fr))]
+        gap-3
+        sm:grid-cols-[repeat(auto-fit,minmax(150px,1fr))]
+        lg:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]
+      "
+    >
+      <div v-for="artiste in listeArtiste" :key="artiste.id">
+        <router-link :to="{ name: 'Focus', params: { id: artiste.id } }"
+          ><img class="w-full rounded-xl" :src="artiste.photo" :alt="artiste.nom"
+        /></router-link>
+        <div class="flex flex-col justify-center">
+          <p class="text-center font-Anton text-base text-red-400 dark:text-white sm:text-2xl lg:text-3xl">{{ artiste.nom }}</p>
 
-
-
-              <div class=" grid grid-flow-row-dense lg:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(150px,1fr))] grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-3">
-              <div v-for="artiste in listeArtiste" :key="artiste.id">
-                  <img class="rounded-xl w-full" :src="artiste.photo" :alt="artiste.nom"/>
-                  <div class="flex flex-col justify-center">
-                    <p class="font-Anton text-center text-base lg:text-3xl text-red-400 dark:text-white sm:text-2xl">{{ artiste.nom }}</p>
-                    
-                    <div class="flex flex-row justify-center">
-                      <router-link :to="{ name: 'custom-artiste', params: { id: artiste.id } }"><PencilAltIcon class="h-5"/></router-link>
-                       <router-link :to="{ name: 'delete-artiste', params: { id: artiste.id } }"><TrashIcon class="h-5 stroke-red-400"/></router-link>
-                      </div>
-                      
-                   
-                  </div>
-              </div>
-              </div>
-           
-
-             
-   
+          <div class="flex flex-row justify-center">
+            <router-link :to="{ name: 'custom-artiste', params: { id: artiste.id } }"><PencilAltIcon class="h-5" /></router-link>
+            <router-link :to="{ name: 'delete-artiste', params: { id: artiste.id } }"><TrashIcon class="h-5 stroke-red-400" /></router-link>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
 </template>
 
 <script>
-
 import Bouton from "../../components/icons/Bouton.vue";
 import { TrashIcon, PencilAltIcon } from "@heroicons/vue/outline";
-
 
 // Bibliothèque Firestore : import des fonctions
 import {
@@ -61,14 +55,14 @@ import {
 
 export default {
   name: "ArtisView",
-   components: { Bouton,TrashIcon,PencilAltIcon },
+  components: { Bouton, TrashIcon, PencilAltIcon },
   data() {
     return {
       listeArtiste: [], // Liste des artistes
     };
   },
-  
-mounted() {
+
+  mounted() {
     // Montage de la vue
     // Appel de la liste des artistes
     this.getArtiste();
