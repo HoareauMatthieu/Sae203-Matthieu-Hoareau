@@ -74,19 +74,19 @@ export default {
   components: { Bouton, Boutonred, TrashIcon, PencilAltIcon },
   data() {
     return {
-      listeCat: [], // Liste des pays - collection pays Firebase
-      libelle: null, // Pour la création d'un nouveau pays
+      listeCat: [], // Liste des catégorie - collection catégorie Firebase
+      libelle: null, // Pour la création d'une nouvelle catégorie
       filter: "",
     };
   },
   computed: {
-    // Tri des pays par nom en ordre croissant
+    // Tri des catégories par nom en ordre croissant
     orderByName: function () {
-      // Parcours et tri des pays 2 à 2
+      // Parcours et tri des catégorie 2 à 2
       return this.listeCat.sort(function (a, b) {
-        // Si le nom du pays est avant on retourne -1
+        // Si le nom de la catégorie est avant on retourne -1
         if (a.libelle < b.libelle) return -1;
-        // Si le nom du pays est après on retourne 1
+        // Si le nom de la catégorie est après on retourne 1
         if (a.libelle > b.libelle) return 1;
         // Sinon ni avant ni après (homonyme) on retourne 0
         return 0;
@@ -100,7 +100,7 @@ export default {
         let filter = this.filter.toLowerCase();
         // Filtrage de la propriété calculée de tri
         return this.orderByName.filter(function (categorie) {
-          // On ne renvoie que les pays dont le nom contient
+          // On ne renvoie que les catégories dont le nom contient
           // la chaine de caractère du filtre
           return categorie.libelle.toLowerCase().includes(filter);
         });
@@ -113,16 +113,16 @@ export default {
   },
   mounted() {
     // Montage de la vue
-    // Appel de la liste des pays synchronisée
+    // Appel de la liste des catégories synchronisée
     this.getCat();
   },
   methods: {
     async getCat() {
       // Obtenir Firestore
       const firestore = getFirestore();
-      // Base de données (collection)  document pays
+      // Base de données (collection)  document catégorie
       const dbCat = collection(firestore, "categorie");
-      // Liste des pays synchronisée
+      // Liste des catégories synchronisée
       const query = await onSnapshot(dbCat, (snapshot) => {
         console.log("query", query);
         //  Récupération des résultats dans listePaysSynchro
@@ -137,7 +137,7 @@ export default {
     async createCat() {
       // Obtenir Firestore
       const firestore = getFirestore();
-      // Base de données (collection)  document pays
+      // Base de données (collection)  document catégorie
       const dbCat = collection(firestore, "categorie");
       // On passe en paramètre format json
       // Les champs à mettre à jour
@@ -151,8 +151,8 @@ export default {
     async updateCat(categorie) {
       // Obtenir Firestore
       const firestore = getFirestore();
-      // Base de données (collection)  document pays
-      // Reference du pays à modifier
+      // Base de données (collection)  document catégorie
+      // Reference de la catégorie à modifier
       const docRef = doc(firestore, "categorie", categorie.id);
       // On passe en paramètre format json
       // Les champs à mettre à jour
@@ -164,10 +164,10 @@ export default {
     async deleteCat(categorie) {
       // Obtenir Firestore
       const firestore = getFirestore();
-      // Base de données (collection)  document pays
-      // Reference du pays à supprimer
+      // Base de données (collection)  document catégorie
+      // Reference de la catégorie à supprimer
       const docRef = doc(firestore, "categorie", categorie.id);
-      // Suppression du pays référencé
+      // Suppression de la catégorie référencé
       await deleteDoc(docRef);
     },
   },
